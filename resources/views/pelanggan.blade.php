@@ -8,15 +8,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-<body style="background-color:#C5FFF8;">
+ <style>
+  body {
+    background-image:url('{{asset ('foto/bg1.jpg')}}');
+  }
+ </style>
 
-<nav class="navbar navbar-dark bg-danger fixed-top">
+<nav class="navbar navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"><i class="fa-solid fa-cash-register"></i>    Aplikasi Kasir</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="offcanvas offcanvas-end text-bg-danger" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"><i class="fa-solid fa-cash-register"></i>    Aplikasi Kasir</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -29,13 +33,24 @@
           
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Barang
+              Produk
             </a>
             <ul class="dropdown-menu dropdown-menu-dark">
               <li><a class="dropdown-item" href="Barang"><i class="fa-solid fa-box-open"></i>  Produk</a></li>
-              <li><a class="dropdown-item" href="#"><i class="fa-solid fa-boxes-stacked"></i> Tambah produk</a></li>
+              <li><a class="dropdown-item" href="tambah_produk"><i class="fa-solid fa-boxes-stacked"></i> Tambah Produk</a></li>
             </ul>
           </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Pelanggan
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="pelanggan"><i class="fa-solid fa-users-line"></i>  Pelanggan</a></li>
+              <li><a class="dropdown-item" href="tambah_produk"><i class="fa-solid fa-users-line"></i> Tambah Pelanggan</a></li>
+            </ul>
+          </li>
+
           <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="penjualan"><i class="fa-solid fa-file-invoice-dollar"></i> Penjualan</a>
           </li>
@@ -70,3 +85,39 @@
     </div>
   </div>
 </nav>
+  <br>
+  <br>
+  <br>
+  <center><h1>DATA PELANGGAN</h1></center>
+  <br>
+  <div class="container">
+  <table class="table">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col"><center>NO</center></th>
+      <th scope="col"><center>Nama Pelanggan</center></th>
+      <th scope="col"><center>Alamat</center></th>
+      <th scope="col"><center>No Telp</center></th>
+      <th scope="col"><center>Aksi</center></th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr>
+      <th scope="row"><center>1</center></th>
+      <td><center>wahyu</center></td>
+      <td><center>pucung</center></td>
+      <td><center>638352334</center></td>
+      <td><center>
+        <a type="button" class="btn btn-danger" onclick="confirm('apakah anda yakin ingin menghapus data ini')"><i class="fa-solid fa-trash"></i> </a> 
+        <a type="button" class="btn btn-success" href="#"><i class="fa-solid fa-pen-to-square"></i> </a>
+      </center></td>
+    </tr>
+  </tbody>
+ </table>
+</div>
+<br>
+<br>
+<br>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
